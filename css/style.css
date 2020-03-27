@@ -1,70 +1,113 @@
-.s1, .s2, .s3, .s4 {
-  margin-top: 10vh;
+:root {
+  --primary-color: rgba(95, 95, 17, 0.911);
+  --secondary-color: rgba(71, 71, 61, 0.911);
+  --text-color: rgb(245, 243, 243);
 }
 
-.images-svg {
-  height: 40vh;
-  width: 100%;
-  /* background: rgba(107, 29, 170, 0.788); */
-  border-radius: 15px;
-}
-
-.heading {
-  font-size: 3rem;
-  font-weight: normal;
-}
-
-.navbar-nav {
-  text-align: center;
-}
-
-iframe {
-  height: 50vh;
-  width: 100%;
-}
-
-.btn-danger {
-  background-color: #4c42ff;
-  border: #6c63ff;
-}
-
-.btn-danger:hover {
-  background-color: #6c63ff;
-  border: #4c42ff;
-}
-
-.purple {
-  background: #6c63ff;
+body{
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-  background: #4c42ff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.6rem;
+  background: var(--primary-color);
+  color: var(--text-color) !important;
 }
 
-nav a {
-  color: white;
+.hero-image {
+  background-image: url(../img/bg.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+  /* background: var(--primary-color); */
+  position: relative;
 }
 
-footer{
-  background: #4c42ff;
-  color: white;
+.hero-image h1 {
+  color: var(--text-color);
+  text-align: center;
+  padding-top: 12vh;
+  font-size: 10rem;
+  z-index: 3;
 }
 
-footer ul {
-  list-style: none;
-}
-
-footer a:visited{
-  color: white;
-}
-
-.credit {
-  background: #262627;
-  height: 10vh;
-  padding-top: 3vh;
-}
-
-/* .navbar-toggler-icon{
-  color: aliceblue;
-  background-color: white;
+/* .overlay {
+  background: rgba(0, 0, 0, 0.333);
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 } */
+
+.myrow {
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.shadow {
+  box-shadow: 5px 5px 10px 5px rgb(117, 117, 117);
+}
+
+.box {
+  background: var(--secondary-color);
+  color: var(
+    --text-color
+  );
+  margin: 2rem 1rem;
+  padding: 2rem;
+}
+
+.box .text {
+  line-height: 2rem;
+}
+
+.box .link {
+  float: right;
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: white;
+}
+
+a:hover{
+  color: white;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .hero-image h1 {
+    color: var(--text-color);
+    text-align: center;
+    padding-top: 15vh;
+    font-size: 5rem;
+    z-index: 3;
+  }
+
+  .hero-image {
+    background-image: url(../img/bg.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100%;
+    /* background: var(--primary-color); */
+    position: relative;
+  }
+
+  .myrow {
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

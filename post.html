@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankahi</title>
+  <link rel="stylesheet" href="./css/single.css">
+</head>
+<body>
+  <div class="container">
+    <div class="single" id="main">
+      <a href="./index.html" class="back">Go Back</a>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <script src="./js/data.js"></script>
+  <script>
+    const showSinglePost = () => {
+      const id = document.location.search.split("=")[1];
+      const post = alfaaz[id];
+      const div = document.getElementById('main');
+      const child = document.createElement('div');
+      child.innerHTML = post.long;
+      div.append(child);
+    };
+    showSinglePost();
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.single {
+  position: relative;
+  box-shadow: 5px 5px 10px 5px rgb(117, 117, 117);
+  height: 100%;
+  padding: 5vh 5vw;
+  margin: 5vh 5vw;
+  background: rgba(219, 219, 219, 0.836);
+  color: rgb(94, 88, 88);
+  font-size: 1.6rem;
+}
+
+.single a {
+  color: black;
+  background-color: #ccc;
+  padding: 1rem;
+  margin: auto;
+  text-decoration: none;
+  border-radius: 5px;
+}
